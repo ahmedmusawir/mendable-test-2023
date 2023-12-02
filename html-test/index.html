@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mendable Testing</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2M.wzJ" crossorigin="anonymous">
+    <style>
+        /* Additional CSS (if needed) */
+        .jumbotron {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Jumbotron for Heading -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Mendable Testing</h1>
+    </div>
+
+    <!-- Container for Mendable Search Input -->
+    <div id="mendable-search" class="text-center"></div>
+
+    <!-- Container for Mendable Chatbot Modal Button -->
+    <div id="mendable-chatbot"></div>
+
+    <!-- Mendable Script -->
+    <script src="https://unpkg.com/@mendable/search@0.0.170/dist/umd/mendable-bundle.min.js"></script>
+    <script>
+        window.onload = function() {
+            // Initialize Mendable Search Bar
+            Mendable.initialize({
+                anon_key: '5074f5b6-fba6-4350-9dea-e4b884766133', // Replace with your anonymous key
+                type: 'searchBar',
+                elementId: 'mendable-search' // ID of the container for the search input
+            });
+
+            // Initialize Mendable Chatbot
+            Mendable.initialize({
+                anon_key: '5074f5b6-fba6-4350-9dea-e4b884766133', // Replace with your anonymous key
+                type: 'floatingButton',
+                elementId: 'mendable-chatbot' // ID of the container for the chatbot button
+            });
+        };
+    </script>
+</body>
+</html>
